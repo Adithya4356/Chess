@@ -81,5 +81,31 @@ io.on("connection", (socket) => {
 });
 
 server.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+    console.log("Server running on https://chess-multiplayer-8w28.onrender.com");
+});
+
+const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+const PORT = process.env.PORT || 3000; // Use Render's assigned port or fallback to 3000
+
+app.get('/', (req, res) => {
+    res.send("Server is running...");
+});
+
+io.on('connection', (socket) => {
+    console.log('A user connected');
+    
+    socket.on('disconnect', () => {
+        console.log('User disconnected');
+    });
+});
+
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
