@@ -2,7 +2,7 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/service-worker.js')
     .then(() => console.log("Service Worker Registered"));
 }
-const socket = io();
+const socket = io("https://chess-multiplayer-8w28.onrender.com");
 let playerName = "";
 let roomCode = "";
 
