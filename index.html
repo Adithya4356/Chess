@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="/manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Multiplayer Chess</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <h1>Multiplayer Chess</h1>
+        <input type="text" id="playerName" placeholder="Enter your name">
+        <button id="createRoomBtn">Create Room</button>
+        <input type="text" id="roomCode" placeholder="Enter Room Code">
+        <button id="joinRoomBtn">Join Room</button>
+        <p id="roomInfo"></p>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+        <h2 id="playerInfo"></h2>
+        <canvas id="chessBoard"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

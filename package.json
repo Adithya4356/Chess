@@ -1,0 +1,19 @@
+{
+  "name": "multiplayer-chess",
+  "version": "1.0.0",
+  "description": "An online multiplayer chess game using WebSockets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node websocket.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
